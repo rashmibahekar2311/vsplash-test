@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vSplash</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <!-- Header starts -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand hide-element-small-screen" href="#"><i class="bi bi-list"></i></a>
+            <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarCollapse">
+                <div class="d-flex w-100">
+                    <div class="w-50">
+                        <form class="w-100">
+                            <div class="d-flex w-100">
+                                <div class="input-group w-100 ">
+                                    <input type="search" class="form-control ml-3"
+                                        placeholder="Search using Website URL, Business Name, Product and more..."
+                                        aria-label="Search" aria-describedby="button-addon2">
+                                    <button class="btn btn-outline-secondary bg-success" type="button"
+                                        id="button-addon2"><i class="bi bi-search" style="color: white;"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"><i
+                                        class="bi bi-question-circle"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <button type="button" class="btn position-relative" style="z-index: 99;">
+                                    <i class="bi bi-bell"></i>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        3
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </button>
+
+                            </li>
+                            <li class="nav-item">
+                                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item dropdown">
+                                            <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <i class="bi bi-person-circle"></i> Julia Michaels
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-dark">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Header ends -->
+    <main>
+        <div class="row">
+            <!-- Sidebar starts -->
+            <div class="bg-dark sticky-sidebar d-flex justify-content-center tab-width">
+                <ul class="list-unstyled">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-original-title="Home">
+                            <i class="bi bi-house-door d-block mb-1"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                            data-bs-placement="right" data-bs-original-title="Customers">
+                            <i class="bi bi-file-earmark d-block"></i>
+                            Profile
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sidebar ends -->
+
+            <!-- Main content -->
+            <div class="col main-section mt-3">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-8">
+
+                        <div class="top-sidebar-content">
+                            <h6 class="side-heading">Filters to find propspects</h6>
+                            <p class="custom-text">These Filters help refine your search results across various Signals
+                                and Segments.
+                            </p>
+                        </div>
+                        <div class="bottom-sidebar-content">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Categories
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne">
+                                        <div class="accordion-body">
+                                            <form class="form-inline">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1"><i
+                                                                class="bi bi-search"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control search-input"
+                                                        placeholder="Search Categories" aria-label="Username"
+                                                        aria-describedby="basic-addon1">
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault" checked>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        ATV Dealer
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault" checked>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        ATV Repair shop
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Abbey
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Abrasives supplier
+                                                    </label>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            WEBSITE
+
+                                        </button>
+
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo">
+                                        <div class="accordion-body">
+                                            <div class="d-flex form-switch mb-2">
+                                                <label>Website</label>
+                                                <input class="form-check-input" type="checkbox" role="switch"
+                                                    id="flexSwitchCheckDefault" />
+
+                                            </div>
+                                            <div class="d-flex form-switch mb-2">
+                                                <label>Responsive</label>
+                                                <input class="form-check-input" type="checkbox" role="switch"
+                                                    id="flexSwitchCheckDefault" />
+
+                                            </div>
+                                            <div class="d-flex form-switch mb-2">
+                                                <label>Mobile</label>
+                                                <input class="form-check-input" type="checkbox" role="switch"
+                                                    id="flexSwitchCheckDefault" />
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            PRIMARY LANGUAGES
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree">
+                                        <div class="accordion-body">
+                                            <form class="form-inline">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1"><i
+                                                                class="bi bi-search"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control search-input" placeholder="Search Primary Languages
+                                                        " aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault" checked>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Catalan(Valentica)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault" checked>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Chinese
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        English
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        French
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        German
+                                                    </label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            SOCIAL
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree">
+                                        <div class="accordion-body">
+                                            <form class="form-inline">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1"><i
+                                                                class="bi bi-search"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control search-input" placeholder="Search Primary Languages
+                                                        " aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault" checked>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Catalan(Valentica)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault" checked>
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Chinese
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        English
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        French
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        German
+                                                    </label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group d-fex">
+                            <button type="button" class="btn btn-outline-secondary">Clear All</button>
+                            <button type="button" class="btn btn-outline-secondary">Save</button>
+                            <button type="button" class="btn btn-outline-secondary">Apply</button>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-9 col-sm-12 tabs-container">
+
+                        <ul class="tabs">
+                            <li class="tab "><a href="#tab1">My account(78)</a></li>
+                            <li class="tab "><a href="#tab2">new(75)</a></li>
+                            <li class="tab "><a href="#tab3">saved searches(05)</a></li>
+                        </ul>
+
+                        <div id="tab1" class="col s12 pr-2">
+                            <div class="sort-container">
+                                <img src="assets/images/Shape.png">
+                                <i class="bi bi-sort-down"></i>
+                                <p>Sort by:</p>
+
+
+                                <div class="" id="navbarNavDarkDropdown">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item dropdown">
+                                            <button class="btn btn-light dropdown-toggle bg-transparent"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Newly Added
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-dark">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-collapse collapse show"
+                                    aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="accordion-body">
+                                        <div class="card " id="panelsStayOpen-collapseOne">
+
+                                            <div class="card-body">
+                                                <div class="checkbox-wrapper ">
+
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label-bold" for="flexCheckDefault">
+                                                        Nationwide Automobile
+
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <div class="d-flex horizontal-separator d-flex-responsive">
+                                                            <div class="d-flex">
+                                                                <img src="assets/images/location.png">
+                                                                <p class="mb-0">26 Prince Street, New York, NY 10012
+                                                                </p>
+                                                            </div>
+                                                            <div class="d-flex color-success">
+                                                                <img src="assets/images/link.png">
+                                                                <p class="mb-0">www.nationwide.com
+
+                                                                </p>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="assets/images/call.png">
+                                                                <p class="mb-0">(718) 523-9090
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row py-3 horizontal-separator">
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Age</p>
+                                                                <p class="value-text">19 Y</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Employees</p>
+                                                                <p class="value-text">35-50</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Revenue</p>
+                                                                <p class="value-text">$5-10M</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Locations</p>
+                                                                <p class="value-text">03</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Contacts</p>
+                                                                <p class="value-text">06</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Avg. Spend/Mo</p>
+                                                                <p class="value-text">Unknown</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex pt-3 d-flex-responsive"
+                                                            style="justify-content: flex-start; gap: 10px;">
+                                                            <div class="d-flex">
+
+                                                                <p class="sub-text">Category(s):
+                                                                </p>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Auto
+                                                                    Auction</button>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Auto Body Parts
+                                                                    Supplier</button>
+                                                            </div>
+                                                            <div class="d-flex">
+
+                                                                <p>Prospects For:
+                                                                </p>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Website</button>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Social</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3" style="text-align: right;">
+                                                        <div class="mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-success btn-sm">Add</button>
+                                                        </div>
+                                                        <div>
+                                                            <img height="83px" width="135px"
+                                                                src="assets/images/238f8b1b-dbaa-4056-8d30-a471b1bd7c40.png">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                            <button class="accordion-button bg-light color-dark" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                Source :&nbsp;<img src="assets/images/comment-icon.png"> &nbsp;Updated
+                                                on: Dec 2017
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-collapse collapse show"
+                                    aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="accordion-body">
+                                        <div class="card " id="panelsStayOpen-collapseTwo">
+
+                                            <div class="card-body">
+                                                <div class="checkbox-wrapper ">
+
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label-bold" for="flexCheckDefault">
+                                                        Nationwide Automobile
+
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <div class="d-flex horizontal-separator d-flex-responsive">
+                                                            <div class="d-flex">
+                                                                <img src="assets/images/location.png">
+                                                                <p class="mb-0">26 Prince Street, New York, NY 10012
+                                                                </p>
+                                                            </div>
+                                                            <div class="d-flex color-success">
+                                                                <img src="assets/images/link.png">
+                                                                <p class="mb-0">www.nationwide.com
+
+                                                                </p>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="assets/images/call.png">
+                                                                <p class="mb-0">(718) 523-9090
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row py-3 horizontal-separator">
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Age</p>
+                                                                <p class="value-text">19 Y</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Employees</p>
+                                                                <p class="value-text">35-50</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Revenue</p>
+                                                                <p class="value-text">$5-10M</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Locations</p>
+                                                                <p class="value-text">03</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Contacts</p>
+                                                                <p class="value-text">06</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Avg. Spend/Mo</p>
+                                                                <p class="value-text">Unknown</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex pt-3 d-flex-responsive"
+                                                            style="justify-content: flex-start; gap: 10px;">
+                                                            <div class="d-flex">
+
+                                                                <p class="sub-text">Category(s):
+                                                                </p>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Auto
+                                                                    Auction</button>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Auto Body Parts
+                                                                    Supplier</button>
+                                                            </div>
+                                                            <div class="d-flex">
+
+                                                                <p>Prospects For::
+                                                                </p>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Website</button>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Social</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3" style="text-align: right;">
+                                                        <div class="mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-success btn-sm">Add</button>
+                                                        </div>
+                                                        <div>
+                                                            <img height="83px" width="135px"
+                                                                src="assets/images/238f8b1b-dbaa-4056-8d30-a471b1bd7c40.png">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                            <button class="accordion-button bg-light color-dark" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                                Source :&nbsp;<img src="assets/images/comment-icon.png"> &nbsp;Updated
+                                                on: Dec 2017
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-collapse collapse show"
+                                    aria-labelledby="panelsStayOpen-headingThree">
+                                    <div class="accordion-body">
+                                        <div class="card " id="panelsStayOpen-collapseThree">
+
+                                            <div class="card-body">
+                                                <div class="checkbox-wrapper ">
+
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label-bold" for="flexCheckDefault">
+                                                        Nationwide Automobile
+
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-9">
+                                                        <div class="d-flex horizontal-separator d-flex-responsive">
+                                                            <div class="d-flex">
+                                                                <img src="assets/images/location.png">
+                                                                <p class="mb-0">26 Prince Street, New York, NY 10012
+                                                                </p>
+                                                            </div>
+                                                            <div class="d-flex color-success">
+                                                                <img src="assets/images/link.png">
+                                                                <p class="mb-0">www.nationwide.com
+
+                                                                </p>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <img src="assets/images/call.png">
+                                                                <p class="mb-0">(718) 523-9090
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row py-3 horizontal-separator">
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Age</p>
+                                                                <p class="value-text">19 Y</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Employees</p>
+                                                                <p class="value-text">35-50</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Revenue</p>
+                                                                <p class="value-text">$5-10M</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Locations</p>
+                                                                <p class="value-text">03</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Contacts</p>
+                                                                <p class="value-text">06</p>
+                                                            </div>
+                                                            <div class="col-lg-2 col-sm-4">
+                                                                <p>Avg. Spend/Mo</p>
+                                                                <p class="value-text">Unknown</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex pt-3 d-flex-responsive"
+                                                            style="justify-content: flex-start; gap: 10px;">
+                                                            <div class="d-flex">
+
+                                                                <p class="sub-text">Category(s):
+                                                                </p>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Auto
+                                                                    Auction</button>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Auto Body Parts
+                                                                    Supplier</button>
+                                                            </div>
+                                                            <div class="d-flex">
+
+                                                                <p>Prospects For::
+                                                                </p>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Website</button>
+                                                                <button type="button"
+                                                                    class="btn btn-outline-secondary btn-sm"
+                                                                    style="border-radius: 20px;">Social</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3" style="text-align: right;">
+                                                        <div class="mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-success btn-sm">Add</button>
+                                                        </div>
+                                                        <div>
+                                                            <img height="83px" width="135px"
+                                                                src="assets/images/238f8b1b-dbaa-4056-8d30-a471b1bd7c40.png">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                            <button class="accordion-button bg-light color-dark" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+                                                Source :&nbsp;<img src="assets/images/comment-icon.png"> &nbsp;Updated
+                                                on: Dec 2017
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="accordion">
+                                <div class="accordion-collapse collapse show"
+                                    aria-labelledby="panelsStayOpen-headingThree">
+                                    <div class="accordion-body">
+                                        <div class="card my-3">
+                                            <div class="card-body bottom-card">
+                                                <p>We can try and fetch more results via an external source. Ok! Get me
+                                                    more</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab2" class="col s12">Tab 2 Content</div>
+                        <div id="tab3" class="col s12">Tab 3 Content</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main content ends -->
+        </div>
+
+    </main>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tabs = document.querySelectorAll('.tabs');
+            var instances = M.Tabs.init(tabs);
+        });
+    </script>
+</body>
+
+</html>
